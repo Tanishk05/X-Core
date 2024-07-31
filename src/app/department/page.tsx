@@ -3,23 +3,19 @@ import Image from "next/image";
 import SecNav from "@/components/SecNav";
 import Complain from "@/components/Complain";
 import { department } from "../utilities/placeholder";
+import Background from "@/components/Background";
 
 const page = () => {
   return (
     <>
       <SecNav />
       <div className="h-screen w-screen flex items-center relative">
-        <div className="flex w-[40%] justify-center items-center absolute">
-          <div className="rounded-[50%] drop-shadow-[#6556CD_0_10px_20px] bg-[#6556CD] h-[500px] w-[500px] relative z-10"></div>
-          <div className="rounded-[50%] drop-shadow-[30px_0_90px_#6556CD] bg-[#1e1e1e] h-[450px] w-[450px] absolute left-[450px] z-0 backdrop-blur-[10px]"></div>
-          <div className="rounded-[50%] bg-[#6556CD] h-[150px] w-[150px] z-20 border-8 border-white flex items-center justify-center top-[15rem] text-4xl font-bold right-[45px] rotate-45 absolute">
-            {"</>"}
-          </div>
-        </div>
+        <Background />
         <div className="z-20 w-full pt-[2rem] flex items-center justify-around">
           <div>
-            <img
+            <Image
               src={"/images/department.png"}
+              alt=""
               height={350}
               width={350}
               className=""
@@ -44,7 +40,9 @@ const page = () => {
                     {" "}
                     {item.name}
                     <div className="w-[50px]  absolute bottom-[-15px] right-[-30px] h-[50px] rounded-[50%]">
-                      <img
+                      <Image
+                        height={10}
+                        width={10}
                         className="w-[90%] h-[90%] object-cover"
                         src=" 
                           https://cdn3d.iconscout.com/3d/premium/thumb/lock-2997205-2516243.png?f=webp
