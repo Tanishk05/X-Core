@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { departments } from "../utilities/placeholder";
+import { departments } from "../lib/placeholder";
 
 const page = () => {
   return (
