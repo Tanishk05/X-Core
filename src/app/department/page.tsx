@@ -22,7 +22,7 @@ const page = () => {
                     <h1 className='text-6xl font-bold'><span className='stroke text-8xl'>Which</span> <br /> Department Are <br />You From ? </h1>
                     <h2 className='text-xl'>Select Your Department so that we can move further to provide you notes <br /> can find Best Notes ,PYQ ,Others</h2>
                 </div>
-                <div className='w-[40vw] h-[30vh] flex items-start flex-col gap-4 '>
+                <div className='w-[40vw] h-[25vh] flex items-start flex-col gap-4 '>
                   <div className='flex gap-6 items-center justify-center'>
                      <button className='bg-[#6556CD] border-2 border-[#6556CD] pt-4 text-xl px-10 py-4 rounded-lg font-bold'>AIML</button>
                      <button className='bg-[#6556CD] border-2 border-[#6556CD] pt-4 text-xl px-10 py-4 rounded-lg font-bold'>CSCY</button>
