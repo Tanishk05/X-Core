@@ -16,19 +16,19 @@ const page = () => {
       </div>
       <div className="flex flex-col gap-8 items-center">
         <div className="flex flex-col gap-4">
-          <h1 className="text-6xl font-bold">
-            Which Semester <br /> Are You In ?{" "}
+          <h1 className="text-8xl font-bold">
+          <span className="stroke">  Which</span> Semester <br /> Are You In ?{" "}
           </h1>
           <h2 className="text-xl">
             Select Your Semester so that we can move <br /> further to provide
             you notes
           </h2>
         </div>
-        <div className="w-[25vw] h-[25vh] flex items-start flex-wrap gap-4">
+        <div className="w-[35vw] h-[25vh] flex items-start flex-wrap gap-4">
             {
                 semesters.map((semester, index) => (
                   <button
-                    className="bg-[#6556CD] border-2 border-[#6556CD] pt-4 text-xl px-10 py-4 rounded-lg font-bold"
+                    className="bg-[#6556CD] border-2 border-[#6556CD] text-xl px-16 py-4 rounded-lg font-bold"
                     key={index}
                   >
                     {semester}
