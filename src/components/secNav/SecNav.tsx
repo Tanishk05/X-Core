@@ -12,16 +12,6 @@ const SecNav = () => {
         <div>
           <h1 className="font-inspiration text-5xl">X-Core</h1>
         </div>
-        <div>
-          <button className="flex gap-1 items-center justify-center border-[#6556CD] border-2 rounded-[30px] px-4">
-            <i className="ri-search-line text-white text-3xl"></i>
-            <input
-              className="px-6 py-3 w-[19vw] rounded bg-transparent border-none outline-none "
-              type="search"
-              placeholder="Search Yout Dept."
-            />
-          </button>
-        </div>
         <div className="flex gap-4 items-center">
           <div className="flex flex-col">
             <button

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import SecNav from "@/components/SecNav";
+import SecNav from "@/components/secNav/SecNav";
 import Background from "@/components/Background";
 import Complain from "@/components/Complain";
 
