@@ -1,21 +1,16 @@
-"use client"
-import { useSession, signIn, signOut } from "next-auth/react"
+import { GithubBtn } from "@/components/auth_btns/GithubBtn";
+import React from "react";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
-export default function Component() {
-  const { data: session } = useSession()
-  if (session) {
-    return (
-      <>
-        Signed in as {session.user.name} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    )
-  }
+const login = async () => {
+  const session = await auth();
+  if (session?.user) redirect("/department");
   return (
     <>
-      Not signed in <br />
-      <button onClick={() => signIn("github")}>Sign in with Github</button>
-      <button onClick={() => signIn("google")}>Sign in with Google</button>
+      <GithubBtn />
     </>
-  )
-}
+  );
+};
+
+export default login;

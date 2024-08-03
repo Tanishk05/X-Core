@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { departments } from "../lib/placeholder";
+import { auth } from "@/auth"
+import { redirect } from "next/navigation";
 
-const page = () => {
+const page = async () => {
+  const session= await auth();
+  if (!session?.user) redirect("/login");
   return (
     <div className="z-20 w-full pt-[2rem] flex items-center justify-around">
       <div>
