@@ -1,12 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { departments } from "../lib/placeholder";
-import { auth } from "@/auth"
+import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import SearchDropDown from "@/components/secNav/SearchDropDown";
+import axios from "axios";
 
 const page = async () => {
-  const session= await auth();
+  const res = await axios.get(`${process.env.DOMAIN}/api/department`);
+  const departments = await res.data;
+
+  const session = await auth();
   if (!session?.user) redirect("/login");
   return (
     <div className="z-20 w-full pt-[2rem] flex items-center justify-around">
@@ -31,7 +34,7 @@ const page = async () => {
             notes <br /> can find Best Notes ,PYQ ,Others
           </h2>
         </div>
-        <SearchDropDown options={departments} nextPage="/department/semester"/>
+        <SearchDropDown options={departments} nextPage="/department/semester" />
       </div>
       <div></div>
     </div>
