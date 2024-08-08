@@ -1,9 +1,16 @@
-import React from 'react'
+import { GithubBtn } from "@/components/auth_btns/GithubBtn";
+import React from "react";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
-const page = () => {
+const login = async () => {
+  const session = await auth();
+  if (session?.user) redirect("/department");
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <GithubBtn />
+    </>
+  );
+};
 
-export default page
+export default login;
